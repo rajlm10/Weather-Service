@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit',(e)=>{
     messageOne.textContent='Loading..'
     messageTwo.textContent='' //clear from any previous search
 
-    fetch(`http://localhost:3000/weather?address=${search}`).then((response)=>{
+    fetch(`/weather?address=${search}`).then((response)=>{  //Localhost or heroku see the url
     response.json().then((data)=>{
         if(data.error)
         {
