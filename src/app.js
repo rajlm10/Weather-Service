@@ -36,7 +36,7 @@ app.get('',(req,res)=>{
 
 app.get('/about',(req,res)=>{           //This isnt file location its the location in the url we desire
     res.render('about',{
-        title: 'About Me',
+        title: 'About',
         name: 'Raj Sangani'
     })
 })
