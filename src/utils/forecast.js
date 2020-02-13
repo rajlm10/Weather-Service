@@ -19,7 +19,8 @@ const forecast=(lat,long,callback)=>{
             
         }
         else{
-            callback(undefined,`${response.body.daily.data[0].summary} The temperature right now is ${response.body.currently.temperature} C and the chances of rainfall right now are ${response.body.currently.precipProbability}%`);
+            callback(undefined,`${response.body.daily.data[0].summary} The temperature right now is ${response.body.currently.temperature} C and the chances of rainfall right now are ${response.body.currently.precipProbability}%\n.The apparent temperature is ${response.body.currently.apparentTemperature} C \n.
+            The UV Index is ${response.body.currently.uvIndex} and the humidity is ${Math.round(response.body.currently.humidity*100,2)}%\n`);
         }
     })
 }
